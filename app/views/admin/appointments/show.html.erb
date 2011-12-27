@@ -1,0 +1,48 @@
+<p>
+  <b>Department:</b>
+  <%=h @appointment.department_id %>
+</p>
+
+<p>
+  <b>Doctor:</b>
+  <%=h @appointment.doctor_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @appointment.name %>
+</p>
+
+<p>
+  <b>Appointment date:</b>
+  <%=h @appointment.appointment_date %>
+</p>
+
+<p>
+  <b>Appointment time:</b>
+  <%=h @appointment.appointment_time %>
+</p>
+
+<p>
+  <b>Reg no:</b>
+  <%=h @appointment.reg_no %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%=h @appointment.age %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%=h @appointment.gender %>
+</p>
+
+<p>
+  <b>Contact no:</b>
+  <%=h @appointment.contact_no %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_appointment_path(@appointment) %> |
+<%= link_to 'Back', admin_appointments_path %>

@@ -1,0 +1,23 @@
+<p>
+  <b>Dept name:</b>
+  <%=h @department.dept_name %>
+</p>
+
+<p>
+  <b>Abbrevation:</b>
+  <%=h @department.abbrevation %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @department.description %>
+</p>
+
+<p>
+  <b>System defined:</b>
+  <%=h @department.system_defined %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_department_path(@department) %> |
+<%= link_to 'Back', admin_departments_path %>

@@ -1,0 +1,48 @@
+<h1>Editing appointment</h1>
+
+<% form_for :appointment,:url=>admin_appointment_path(@appointment),:html=>{:method=>:put} do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :department_id %><br />
+    <%= f.text_field :department_id %>
+  </p>
+  <p>
+    <%= f.label :doctor_id %><br />
+    <%= f.text_field :doctor_id %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :appointment_date %><br />
+    <%= f.date_select :appointment_date %>
+  </p>
+  <p>
+    <%= f.label :appointment_time %><br />
+    <%= f.datetime_select :appointment_time %>
+  </p>
+  <p>
+    <%= f.label :reg_no %><br />
+    <%= f.text_field :reg_no %>
+  </p>
+  <p>
+    <%= f.label :age %><br />
+    <%= f.text_field :age %>
+  </p>
+  <p>
+    <%= f.label :gender %><br />
+    <%= f.text_field :gender %>
+  </p>
+  <p>
+    <%= f.label :contact_no %><br />
+    <%= f.text_field :contact_no %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', admin_appointment_path(@appointment) %> |
+<%= link_to 'Back', admin_appointments_path %>

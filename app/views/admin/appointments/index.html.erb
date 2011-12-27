@@ -1,0 +1,36 @@
+<h1>Listing appointments</h1>
+
+<table>
+  <tr>
+    <th>Department</th>
+    <th>Doctor</th>
+    <th>Name</th>
+    <th>Appointment date</th>
+    <th>Appointment time</th>
+    <th>Reg no</th>
+    <th>Age</th>
+    <th>Gender</th>
+    <th>Contact no</th>
+  </tr>
+
+<% for appointment in @appointments %>
+  <tr>
+    <td><%=h appointment.department.dept_name%></td>
+    <td><%=h appointment.doctor.doctor_name%></td>
+    <td><%=h appointment.name %></td>
+    <td><%=h appointment.appointment_date %></td>
+    <td><%=h appointment.appointment_time %></td>
+    <td><%=h appointment.reg_no %></td>
+    <td><%=h appointment.age %></td>
+    <td><%=h appointment.gender %></td>
+    <td><%=h appointment.contact_no %></td>
+    <td><%= link_to 'Show', admin_appointment_path(appointment) %></td>
+    <td><%= link_to 'Edit', edit_admin_appointment_path(appointment) %></td>
+    <td><%= link_to 'Destroy', admin_appointment_path(appointment), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New appointment', new_admin_appointment_path %>

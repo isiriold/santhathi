@@ -1,0 +1,32 @@
+<h1>Listing doctors</h1>
+
+<table>
+  <tr>
+    <th>Department</th>
+    <th>Doctor name</th>
+    <th>Designation</th>
+    <th>Medical</th>
+    <th>Working from</th>
+    <th>Working to</th>
+    <th>Comments</th>
+  </tr>
+
+<% for doctor in @doctors %>
+  <tr>
+    <td><%=h doctor.department.dept_name %></td>
+    <td><%=h doctor.doctor_name %></td>
+    <td><%=h doctor.designation %></td>
+    <td><%=h doctor.medical_id %></td>
+    <td><%=h doctor.working_from %></td>
+    <td><%=h doctor.working_to %></td>
+    <td><%=h doctor.comments %></td>
+    <td><%= link_to 'Show', admin_doctor_path(doctor) %></td>
+    <td><%= link_to 'Edit',  edit_admin_doctor_path(doctor) %></td>
+    <td><%= link_to 'Destroy', admin_doctor_path(doctor), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New doctor',  new_admin_doctor_path %>
